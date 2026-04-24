@@ -37,7 +37,7 @@ const sections = [
     desc: "The pinnacle of high-performance utility. 800 CV of lightning-fast acceleration and uncompromising power.",
     tags: ["High Velocity", "800 CV", "Turbocharged"],
     color: "#050505",
-    accent: "#E31B23"
+    accent: "#C5A47E"
   },
   {
     label: "02 — M Performance",
@@ -45,7 +45,7 @@ const sections = [
     desc: "Precision engineering meets aggressive design. A straight-six masterpiece that delivers raw power and surgical handling.",
     tags: ["M-Powered", "503 HP", "Isle of Man Green"],
     color: "#050505",
-    accent: "#E31B23"
+    accent: "#C5A47E"
   },
   {
     label: "03 — Track Focused",
@@ -53,7 +53,7 @@ const sections = [
     desc: "A pure driver's car. Lightweight carbon construction and a mid-mounted V8 designed for the ultimate adrenaline rush.",
     tags: ["Carbon Tube", "V8 Bi-Turbo", "Monocell II"],
     color: "#050505",
-    accent: "#E31B23"
+    accent: "#C5A47E"
   }
 ];
 
@@ -489,7 +489,7 @@ const Showcase: React.FC = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="fixed bottom-32 left-1/2 -translate-x-1/2 z-100 bg-red-500/10 backdrop-blur-md border border-red-500/20 px-6 py-4 rounded-sm flex items-center gap-4 text-red-500 pointer-events-auto"
+            className="fixed bottom-32 left-1/2 -translate-x-1/2 z-100 bg-accent/10 backdrop-blur-md border border-accent/20 px-6 py-4 rounded-sm flex items-center gap-4 text-accent pointer-events-auto"
           >
             <AlertCircle size={20} />
             <div className="flex flex-col">

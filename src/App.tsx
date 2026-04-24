@@ -45,12 +45,12 @@ export default function App() {
   const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.98]);
 
   return (
-    <div className="relative bg-black font-sans selection:bg-red-500 selection:text-white overflow-x-hidden" id="home">
+    <div className="relative bg-black font-sans selection:bg-accent selection:text-black overflow-x-hidden" id="home">
       {/* Background HUD Layers */}
       <div className="fixed inset-0 z-0 bg-grid-scan opacity-20 pointer-events-none" />
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-red-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-red-500/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/20 to-transparent" />
         <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white opacity-[0.02]" />
       </div>
 
@@ -58,11 +58,11 @@ export default function App() {
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 px-2 py-2 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full pointer-events-auto">
         <div className="flex items-center gap-3 px-6 py-2 border-r border-white/10">
           <img 
-            src="/Screenshot 2026-04-23 at 12.45.14 PM.png" 
-            alt="Turismo" 
-            className="h-6 w-auto invert brightness-0"
+            src="/Screenshot 2026-04-24 at 3.42.13 PM.png" 
+            alt="Private Keys" 
+            className="h-6 w-auto"
           />
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white hidden md:block">Turismo Exotics</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white hidden md:block">Private Keys</span>
         </div>
         <div className="flex items-center gap-1 md:gap-4 px-2">
           {navLinks.map((link, i) => (
@@ -83,7 +83,7 @@ export default function App() {
         </div>
         <button 
           onClick={() => setShowInventory(true)}
-          className="ml-2 bg-red-600 text-white px-6 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-red-500 transition-colors shadow-[0_0_20px_rgba(227,27,35,0.3)]"
+          className="ml-2 bg-accent text-black px-6 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-accent/80 transition-colors shadow-[0_0_20px_rgba(197,164,126,0.3)]"
         >
           Book Now
         </button>
@@ -103,8 +103,8 @@ export default function App() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-0.5 bg-red-600" />
-                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-red-500">System Ready</span>
+                <div className="w-12 h-0.5 bg-accent" />
+                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-accent">System Ready</span>
               </div>
               <h1 className="text-7xl md:text-9xl lg:text-[140px] font-bold leading-[0.8] uppercase tracking-[-0.06em] mb-12">
                 Unleash <br/> 
@@ -141,14 +141,14 @@ export default function App() {
               {/* HUD Elements on Image */}
               <div className="absolute top-8 left-8 flex flex-col gap-1">
                 <span className="text-[8px] font-mono text-white/50 tracking-widest">SCAN_SEQ_082</span>
-                <div className="w-10 h-0.5 bg-red-600" />
+                <div className="w-10 h-0.5 bg-accent" />
               </div>
 
               <div className="absolute bottom-8 left-8 right-8">
                 <div className="flex justify-between items-end">
                   <div>
-                    <p className="text-4xl font-bold mb-1 tracking-tighter">TURISMO</p>
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-red-500 font-bold">Elite Performance</p>
+                    <p className="text-4xl font-bold mb-1 tracking-tighter">PRIVATE KEYS</p>
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Elite Performance</p>
                   </div>
                   <MousePointer2 className="text-white/20 -rotate-12" size={32} />
                 </div>
@@ -160,9 +160,9 @@ export default function App() {
         {/* Global Specs - HUD Strips */}
         <div className="w-full max-w-[1600px] mt-24 border-y border-white/5 grid grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-white/5">
           {specs.map((spec, i) => (
-            <div key={i} className="px-10 py-12 flex flex-col gap-2 group cursor-crosshair hover:bg-red-600/5 transition-colors">
+            <div key={i} className="px-10 py-12 flex flex-col gap-2 group cursor-crosshair hover:bg-accent/5 transition-colors">
               <span className="text-[9px] font-mono text-white/20 tracking-widest uppercase">[{i.toString().padStart(2, '0')}] {spec.label}</span>
-              <span className="text-4xl font-bold tracking-tighter group-hover:text-red-500 transition-colors uppercase">{spec.val}</span>
+              <span className="text-4xl font-bold tracking-tighter group-hover:text-accent transition-colors uppercase">{spec.val}</span>
             </div>
           ))}
         </div>
@@ -178,7 +178,7 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-24">
             <div className="max-w-2xl">
-              <span className="text-[10px] font-bold uppercase tracking-[0.8em] text-red-500 mb-6 block">Command Center Services</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.8em] text-accent mb-6 block">Command Center Services</span>
               <h2 className="text-6xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">Technical <br/> <span className="text-outline">Support.</span></h2>
             </div>
             <div className="flex flex-col items-end text-right">
@@ -186,7 +186,7 @@ export default function App() {
                 Real-time support / Multi-modal logistics / Performance optimization
               </p>
               <div className="flex gap-2">
-                {[1, 2, 3].map(i => <div key={i} className="w-1.5 h-1.5 bg-red-600" />)}
+                {[1, 2, 3].map(i => <div key={i} className="w-1.5 h-1.5 bg-accent" />)}
               </div>
             </div>
           </div>
@@ -201,26 +201,26 @@ export default function App() {
               <img src="https://static.wixstatic.com/media/dfb3c4_c0a36ab317df453aa2e9e293710567a1~mv2.jpg" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-editorial grayscale group-hover:grayscale-0" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent h-full" />
               <div className="absolute bottom-12 left-12">
-                <span className="text-[10px] font-bold text-red-500 mb-4 block uppercase tracking-widest font-mono">MOD_PHOTO_PRO</span>
+                <span className="text-[10px] font-bold text-accent mb-4 block uppercase tracking-widest font-mono">MOD_PHOTO_PRO</span>
                 <h3 className="text-4xl font-bold mb-4 uppercase">Visual Documentation</h3>
                 <p className="text-white/40 text-sm max-w-xs uppercase tracking-widest leading-loose">High-fidelity photography for elite fleet documentation.</p>
               </div>
-              <div className="absolute top-12 right-12 text-3xl font-bold text-white/10 group-hover:text-red-500/40 transition-colors">01</div>
+              <div className="absolute top-12 right-12 text-3xl font-bold text-white/10 group-hover:text-accent/40 transition-colors">01</div>
             </motion.div>
 
             {/* Square Bento Item */}
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="md:col-span-4 group bg-red-600 p-12 rounded-sm flex flex-col justify-between hover:bg-red-700 transition-colors cursor-pointer"
+              className="md:col-span-4 group bg-accent p-12 rounded-sm flex flex-col justify-between hover:bg-accent/90 transition-colors cursor-pointer"
             >
-              <div className="text-white">
-                <span className="text-[10px] font-bold text-white/50 mb-4 block uppercase tracking-widest font-mono">MOD_ROM_PKG</span>
-                <h3 className="text-4xl font-bold mb-6 uppercase">Redline Experience</h3>
+              <div className="text-black">
+                <span className="text-[10px] font-bold text-black/50 mb-4 block uppercase tracking-widest font-mono">MOD_ROM_PKG</span>
+                <h3 className="text-4xl font-bold mb-6 uppercase">Goldline Experience</h3>
               </div>
               <div className="flex flex-col gap-6">
-                <p className="text-white/70 text-xs uppercase tracking-[0.2em] leading-relaxed">Turbocharge your events with bespoke automotive styling and concierge delivery.</p>
-                <ArrowUpRight size={48} className="text-white/20 group-hover:text-white transition-all transform group-hover:translate-x-2 group-hover:-translate-y-2" />
+                <p className="text-black/70 text-xs uppercase tracking-[0.2em] leading-relaxed">Turbocharge your events with bespoke automotive styling and concierge delivery.</p>
+                <ArrowUpRight size={48} className="text-black/20 group-hover:text-black transition-all transform group-hover:translate-x-2 group-hover:-translate-y-2" />
               </div>
             </motion.div>
 
@@ -228,11 +228,11 @@ export default function App() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="md:col-span-4 bg-luxury-grey p-10 border border-white/5 hover:border-red-500/40 transition-colors"
+              className="md:col-span-4 bg-luxury-grey p-10 border border-white/5 hover:border-accent/40 transition-colors"
             >
               <div className="flex flex-col h-full justify-between">
                 <div className="w-12 h-12 bg-white/5 flex items-center justify-center rounded-sm">
-                  <Phone size={20} className="text-red-500" />
+                  <Phone size={20} className="text-accent" />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold mb-2 uppercase">24/7 Logistics</h4>
@@ -248,14 +248,14 @@ export default function App() {
               className="md:col-span-8 group relative bg-luxury-grey rounded-sm overflow-hidden border border-white/5 flex items-center p-12"
             >
               <div className="flex flex-col md:flex-row gap-12 items-center w-full">
-                <div className="w-24 h-24 border border-red-500/40 flex items-center justify-center rounded-full hud-glow shrink-0">
+                <div className="w-24 h-24 border border-accent/40 flex items-center justify-center rounded-full hud-glow shrink-0">
                   <div className="w-16 h-16 border border-white/10 rounded-full animate-pulse" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold mb-4 uppercase">VIP Precision Delivery</h3>
                   <p className="text-white/40 text-sm uppercase tracking-widest leading-loose">Automated coordinate tracking and delivery to any of our served multi-state locations.</p>
                 </div>
-                <button className="px-8 py-4 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest hover:bg-red-600 transition-colors shrink-0">Inquire</button>
+                <button className="px-8 py-4 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest hover:bg-accent hover:text-black transition-colors shrink-0">Inquire</button>
               </div>
             </motion.div>
           </div>
@@ -268,13 +268,13 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-6 mb-12">
-                <div className="w-20 h-[1px] bg-red-600" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.8em] text-red-500">Core Protocol</span>
+                <div className="w-20 h-[1px] bg-accent" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.8em] text-accent">Core Protocol</span>
               </div>
               <h2 className="text-7xl md:text-9xl font-bold tracking-tighter uppercase leading-[0.85] mb-12">Total <br/> <span className="text-outline">Command.</span></h2>
               <div className="space-y-8 text-white/50 text-xl leading-relaxed font-light font-mono">
                 <p>
-                  &gt; TURISMO EXOTICS IS MORE THAN RENTALS.<br/>
+                  &gt; PRIVATE KEYS IS MORE THAN RENTALS.<br/>
                   &gt; WE ARE THE PERFORMANCE OPERATORS OF MIAMI, TAMPA, ORLANDO & NY.
                 </p>
                 <p className="text-base text-white/30 uppercase tracking-widest leading-loose">
@@ -284,25 +284,25 @@ export default function App() {
               <div className="mt-16 grid grid-cols-2 gap-12 border-t border-white/5 pt-16">
                 <div>
                   <p className="text-5xl font-bold mb-2">04</p>
-                  <p className="text-[9px] uppercase tracking-[0.4em] text-red-500 font-bold">Primary Hubs</p>
+                  <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Primary Hubs</p>
                 </div>
                 <div>
                   <p className="text-5xl font-bold mb-2">100%</p>
-                  <p className="text-[9px] uppercase tracking-[0.4em] text-red-500 font-bold">Execution</p>
+                  <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Execution</p>
                 </div>
               </div>
             </div>
             
             <div className="order-1 lg:order-2 relative aspect-3/4 bg-white/[0.02] border border-white/10 flex items-center justify-center p-12 corner-bracket">
-              <div className="absolute inset-0 opacity-10 blur-3xl bg-red-600/20" />
+              <div className="absolute inset-0 opacity-10 blur-3xl bg-accent/20" />
               <img 
                 src="https://static.wixstatic.com/media/dfb3c4_b6f26321e375441caaf70f3e26f8cef5~mv2.jpg" 
                 className="w-full h-full object-cover border border-white/5 grayscale group-hover:grayscale-0 transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
               {/* Technical Overlay */}
-              <div className="absolute top-1/2 left-0 w-full h-px bg-red-600/40" />
-              <div className="absolute top-0 left-1/2 w-px h-full bg-red-600/40" />
+              <div className="absolute top-1/2 left-0 w-full h-px bg-accent/40" />
+              <div className="absolute top-0 left-1/2 w-px h-full bg-accent/40" />
             </div>
           </div>
         </div>
@@ -314,13 +314,13 @@ export default function App() {
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-4 mb-12">
               <img 
-                src="/Screenshot 2026-04-23 at 12.45.14 PM.png" 
-                alt="Turismo" 
-                className="h-10 w-auto invert brightness-0"
+                src="/Screenshot 2026-04-24 at 3.42.13 PM.png" 
+                alt="Private Keys" 
+                className="h-10 w-auto"
               />
               <div>
-                <span className="text-xl font-bold tracking-tighter text-white uppercase leading-none block">Turismo</span>
-                <span className="text-[10px] tracking-[0.4em] text-red-500 font-bold uppercase mt-1">Exotics HQ</span>
+                <span className="text-xl font-bold tracking-tighter text-white uppercase leading-none block">Private Keys</span>
+                <span className="text-[10px] tracking-[0.4em] text-accent font-bold uppercase mt-1">Exotics HQ</span>
               </div>
             </div>
             <div className="flex flex-col gap-4 text-[9px] font-mono uppercase tracking-[0.2em] text-white/30">
@@ -331,16 +331,16 @@ export default function App() {
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.6em] mb-12 text-red-500">Fleet Interface</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.6em] mb-12 text-accent">Fleet Interface</h4>
             <div className="flex flex-col gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-white/50">
               {["Master Deck", "Support Hub", "Access Portal", "System Inquiry"].map(label => (
-                <a key={label} href="#" className="hover:text-red-500 transition-colors w-fit">{label}</a>
+                <a key={label} href="#" className="hover:text-accent transition-colors w-fit">{label}</a>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.6em] mb-12 text-red-500">Contact Protocol</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.6em] mb-12 text-accent">Contact Protocol</h4>
             <div className="flex flex-col gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-white/30">
               <p>Direct: FL_NY_TERRITORIES</p>
               <p>Secure: ENCRYPTED_INBOX</p>
@@ -349,19 +349,19 @@ export default function App() {
           </div>
 
           <div className="relative p-12 bg-white/[0.02] border border-white/10 corner-bracket overflow-hidden group">
-            <div className="absolute inset-0 bg-red-600/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-accent/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             <h4 className="relative text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-white">System Inquiry</h4>
-            <button className="relative w-full py-5 bg-red-600 text-white text-[10px] font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all hud-glow">
+            <button className="relative w-full py-5 bg-accent text-black text-[10px] font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all hud-glow">
               Initialize Booking
             </button>
           </div>
         </div>
 
         <div className="max-w-[1400px] mx-auto border-t border-white/5 pt-10 flex justify-between items-center">
-          <p className="text-[9px] font-mono tracking-[0.4em] text-white/10 uppercase">© 2025 TURISMO_OPERATIONS // ALL_RIGHTS_RESERVED.</p>
+          <p className="text-[9px] font-mono tracking-[0.4em] text-white/10 uppercase">© 2026 PRIVATE_KEYS_OPERATIONS // ALL_RIGHTS_RESERVED.</p>
           <div className="hidden md:flex gap-10">
             {["Terms", "Privacy", "System"].map(link => (
-              <a key={link} href="#" className="text-[9px] font-mono tracking-[0.4em] text-white/10 hover:text-red-500 transition-colors uppercase">{link}</a>
+              <a key={link} href="#" className="text-[9px] font-mono tracking-[0.4em] text-white/10 hover:text-accent transition-colors uppercase">{link}</a>
             ))}
           </div>
         </div>
