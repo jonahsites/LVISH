@@ -6,10 +6,10 @@ import { useState } from "react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Our Collection", type: "page" },
+  { name: "The Collection", type: "page" },
+  { name: "Chauffeur", href: "#services" },
   { name: "About Us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Investors", href: "#" },
+  { name: "Inquiry", href: "#contact" },
 ];
 
 const faqItems = [
@@ -58,11 +58,11 @@ export default function App() {
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 px-2 py-2 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full pointer-events-auto">
         <div className="flex items-center gap-3 px-6 py-2 border-r border-white/10">
           <img 
-            src="/Screenshot 2026-04-24 at 3.42.13 PM.png" 
-            alt="Private Keys" 
+            src="https://www.image2url.com/r2/default/images/1777341796276-364657ed-797c-4bb1-b55b-8b13b87b48ea.png" 
+            alt="LVISH Services" 
             className="h-6 w-auto"
           />
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white hidden md:block">Private Keys</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white hidden md:block">LVISH Services</span>
         </div>
         <div className="flex items-center gap-1 md:gap-4 px-2">
           {navLinks.map((link, i) => (
@@ -117,7 +117,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="text-[9px] uppercase tracking-widest text-white/30 mb-2">Service Hubs</p>
-                  <p className="text-sm font-medium leading-relaxed">Miami / Tampa / Orlando / NY.</p>
+                  <p className="text-sm font-medium leading-relaxed font-sans italic text-white/80">Miami / Montreal.</p>
                 </div>
               </div>
             </motion.div>
@@ -147,7 +147,7 @@ export default function App() {
               <div className="absolute bottom-8 left-8 right-8">
                 <div className="flex justify-between items-end">
                   <div>
-                    <p className="text-4xl font-bold mb-1 tracking-tighter">PRIVATE KEYS</p>
+                    <p className="text-4xl font-bold mb-1 tracking-tighter">LVISH</p>
                     <p className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Unrivaled Selection</p>
                   </div>
                   <MousePointer2 className="text-white/20 -rotate-12" size={32} />
@@ -179,11 +179,11 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-24">
             <div className="max-w-2xl">
               <span className="text-[10px] font-bold uppercase tracking-[0.8em] text-accent mb-6 block">Concierge Protocols</span>
-              <h2 className="text-6xl md:text-8xl font-serif font-bold tracking-tighter uppercase leading-[0.85]">Bespoke <br/> <span className="text-outline">Assistance.</span></h2>
+              <h2 className="text-6xl md:text-8xl font-serif font-bold tracking-tighter uppercase leading-[0.85]">Bespoke <br/> <span className="text-outline">Chauffeur.</span></h2>
             </div>
             <div className="flex flex-col items-end text-right">
               <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-8 uppercase tracking-widest font-mono">
-                White-glove logistics / 24-7 Client service / Seamless delivery
+                White-glove chauffeur / Private rentals / Seamless delivery
               </p>
               <div className="flex gap-2">
                 {[1, 2, 3].map(i => <div key={i} className="w-1.5 h-1.5 bg-accent" />)}
@@ -274,16 +274,16 @@ export default function App() {
               <h2 className="text-7xl md:text-9xl font-serif font-bold tracking-tighter uppercase leading-[0.85] mb-12">Total <br/> <span className="text-outline">Excellence.</span></h2>
               <div className="space-y-8 text-white/50 text-xl leading-relaxed font-light font-mono">
                 <p>
-                  &gt; PRIVATE KEYS IS MORE THAN RENTALS.<br/>
-                  &gt; WE ARE THE PREMIER OPERATORS OF MIAMI, TAMPA, ORLANDO & NY.
+                  &gt; LVISH SERVICES IS MORE THAN RENTALS.<br/>
+                  &gt; WE ARE THE PREMIER OPERATORS OF MIAMI & MONTREAL.
                 </p>
                 <p className="text-base text-white/30 uppercase tracking-widest leading-loose">
-                  Our fleet is a curated selection of automotive perfection. We provide the entry to the most exclusive destinations, maintained to obsessive standards of excellence and delivered with absolute discretion.
+                  Our fleet is a curated selection of automotive perfection. From private chauffeur services to elite rentals, we provide the entry to the most exclusive destinations, maintained to obsessive standards of excellence and delivered with absolute discretion.
                 </p>
               </div>
               <div className="mt-16 grid grid-cols-2 gap-12 border-t border-white/5 pt-16">
                 <div>
-                  <p className="text-5xl font-bold mb-2">04</p>
+                  <p className="text-5xl font-bold mb-2">02</p>
                   <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Primary Hubs</p>
                 </div>
                 <div>
@@ -314,18 +314,18 @@ export default function App() {
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-4 mb-12">
               <img 
-                src="/Screenshot 2026-04-24 at 3.42.13 PM.png" 
-                alt="Private Keys" 
+                src="https://www.image2url.com/r2/default/images/1777341796276-364657ed-797c-4bb1-b55b-8b13b87b48ea.png" 
+                alt="LVISH Services" 
                 className="h-10 w-auto"
               />
               <div>
-                <span className="text-xl font-bold tracking-tighter text-white uppercase leading-none block">Private Keys</span>
+                <span className="text-xl font-bold tracking-tighter text-white uppercase leading-none block">LVISH Services</span>
                 <span className="text-[10px] tracking-[0.4em] text-accent font-bold uppercase mt-1">Premier Registry</span>
               </div>
             </div>
             <div className="flex flex-col gap-4 text-[9px] font-mono uppercase tracking-[0.2em] text-white/30">
-              <p>REGION: MIAMI_TERRITORY</p>
-              <p>STATUS: UNWAVERING_SERVICE</p>
+              <p>REGIONS: MIAMI & MONTREAL</p>
+              <p>DIRECT: (514) 229-5032</p>
               <p>ESTABLISHED: MMXXIV</p>
             </div>
           </div>
@@ -358,7 +358,7 @@ export default function App() {
         </div>
 
         <div className="max-w-[1400px] mx-auto border-t border-white/5 pt-10 flex justify-between items-center">
-          <p className="text-[9px] font-mono tracking-[0.4em] text-white/10 uppercase">© 2026 PRIVATE_KEYS_OPERATIONS // ALL_RIGHTS_RESERVED.</p>
+          <p className="text-[9px] font-mono tracking-[0.4em] text-white/10 uppercase">© 2026 LVISH_OPERATIONS // ALL_RIGHTS_RESERVED.</p>
           <div className="hidden md:flex gap-10">
             {["Terms", "Privacy", "System"].map(link => (
               <a key={link} href="#" className="text-[9px] font-mono tracking-[0.4em] text-white/10 hover:text-accent transition-colors uppercase">{link}</a>
